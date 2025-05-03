@@ -1,85 +1,59 @@
 ![organogram_bedfinal](https://github.com/user-attachments/assets/0a016ed3-758c-4b42-be75-f27057f52843)
 
+🚀 How to Get Started
+You can clone the repository, install dependencies, and run the app using the following steps:
 
-
-
-# BED Final Project Starter
-
-This repository contains starter code for the Bookings project.
-
-## How to get started
-
-You can clone the repo, install and run the app with the following commands:
-
-````plaintext
-<<<<<<< HEAD
-
-npm install      (open in the 1e terminal)
-npm install har-validator@latest (if necessary)
-npm install uuid@latest          (if necessary)
-or use / npm audit fix
+🧱 1. Install Frontend/Backend Dependencies
+(Open Terminal 1)
 
 npm install
-npm run dev
+npm install har-validator@latest   # If needed
+npm install uuid@latest            # If needed
+npm audit fix                      # Optional, to fix vulnerabilities
+npm run dev                        # Starts the app on default dev port (e.g., 5173)
 
-npx prisma studio (open in the 2e extra terminal, so you will have 2 terminals open)
-=======
->>>
+🧭 2. Start Prisma Studio
+(Open Terminal 2 in parallel)
 
-## Starting the App
+npx prisma studio
 
-To start the app, follow these steps:
+⚙️ Setting Up Environment Variables
+Create a .env file in the root directory and add your own keys (if not already included):
 
-1. Create a `.env` file in the root directory.
-2. Replace the values for `AUTH_SECRET_KEY` and `SENTRY_DSN` with your own values.
-
-```plaintext
 AUTH_SECRET_KEY=your_secret_key_here
 SENTRY_DSN=your_sentry_dsn_here
-````
 
-## Running tests
+✅ Running Tests
+Tests are executed using Newman, a CLI tool for running Postman collections. The test flow mimics real API calls — such as validating success codes (200, 201) or failure (404, etc.).
 
-Tests are created using Newman, a command-line tool that is able to automate execution of Postman-created tests. Therefore, this command will simulate more or less the same tests that we executed during the course (e.g. test if the "happy case" returns 200 or 201 status code, or it returns 404 Not found when we are requesting a non-existing ID).
+Steps to Run Tests:
+1. Start the server
+Run in project root:
 
-To run the tests, perform the following steps:
+npm run dev
 
-1. Start the server. This can usually be done by running `npm run dev` in the folder you want to test.
-2. Go to `postman/environments` folder in the repo. It has a content like this:
+2. Verify Postman Environment Configuration
+Navigate to the postman/environments folder. You’ll find a file like this:
 
-```json
+json: 
 {
-  "id": "f1936dc5-a5da-47d7-8189-045437f96e9e",
-  "name": "Local",
-  "values": [
-    {
-      "key": "baseUrl",
-      "value": "http://0.0.0.0:3000",
-      "type": "default",
-      "enabled": true
-    }
-  ],
-  "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2023-08-11T05:55:13.469Z",
-  "_postman_exported_using": "Postman/10.16.9"
+  "key": "baseUrl",
+  "value": "http://0.0.0.0:3000",
+  "enabled": true
 }
-```
 
-3. If your server is running on a different port or URL, change the value `http://0.0.0.0:3000` to your server's data (this is the default one though).
-4. Run the following command
+⚠️ If your server uses a different port or URL, update baseUrl accordingly.
+3. Run Tests
 
-```plaintext
 npm run test
-```
 
+You’ll see the test results directly in the terminal. Behind the scenes, this command runs a Postman collection stored in the postman/ folder as defined in your package.json.
 
-After this, you will see the test results prompted to the terminal. If you have a look at the `package.json` file, you will see that it executes the collection stored in the `postman` folder of the repo root.
+⚠️ Important Notes:
+Data-sensitive Tests: Some tests use DELETE endpoints, which means they modify the database. Always restart the server (npm run dev) before rerunning tests.
 
-Important: When dealing with JSON data, please, make sure that you restart the server with `npm run dev` every time you execute tests! This is important because some tests will remove data via DELETE endpoints and that operation cannot be repeated with the same ID again and again.
-<<<<<<< HEAD
-=======
+Be cautious with test accounts or sample data, especially if tied to registration/auth endpoints.
 
-``` Thanks and credits to WincAcademy in Amsterdam, The Netherlands! ```
 ![image](https://github.com/aelyakoubi/bed-final-repository/assets/115151631/18ed8d47-0415-4b3b-b6a4-dc1764abbd1b)
 ![bed-final-repository_image03](https://github.com/aelyakoubi/bed-final-repository/assets/115151631/a06f2b4d-0315-4a38-ab23-2500158be4dd)
 ![image](https://github.com/aelyakoubi/bed-final-repository/assets/115151631/63819e39-edab-4123-9859-d0a2fd73c527)
