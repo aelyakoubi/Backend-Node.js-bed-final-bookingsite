@@ -75,8 +75,8 @@ You’ll see the test results directly in the terminal. Behind the scenes, this 
 - **Be cautious with test accounts or sample data**, especially if tied to registration/auth endpoints.
 
 
-
-
+![Positive API integrationtest 2025-05-04 213712](https://github.com/user-attachments/assets/1e5f9d15-4ee3-4a23-a61d-4bc3adccacb4)
+![Negative API integrationtest 2025-05-04 213807](https://github.com/user-attachments/assets/1b85b179-7f3d-4448-914f-da480e75e8d8)
 ![bed-final-repository_image03](https://github.com/aelyakoubi/bed-final-repository/assets/115151631/a06f2b4d-0315-4a38-ab23-2500158be4dd)
 ![image](https://github.com/aelyakoubi/bed-final-repository/assets/115151631/18ed8d47-0415-4b3b-b6a4-dc1764abbd1b)
 ![image](https://github.com/aelyakoubi/bed-final-repository/assets/115151631/63819e39-edab-4123-9859-d0a2fd73c527)
